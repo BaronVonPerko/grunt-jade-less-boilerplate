@@ -17,7 +17,7 @@ module.exports = function(grunt) {
                 tasks: ['less'],
             },
             partials: {
-              files: ['partials/*.jade'],
+              files: ['partials/index.jade'],
               tasks: ['jade']
             }
         },
@@ -26,8 +26,6 @@ module.exports = function(grunt) {
             bsFiles: {src: [
               './build/index.html',
               './build/style.css',
-              './style/*.less',
-              './partials/*.jade'
             ]},
             options: {
               watchTask: true,
@@ -42,7 +40,7 @@ module.exports = function(grunt) {
           compile: {
             files: {
               'build/index.html':
-                ['partials/*.jade']
+                ['partials/index.jade']
             }
           }
         }
